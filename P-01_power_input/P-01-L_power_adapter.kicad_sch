@@ -229,29 +229,43 @@
         )
       )
     )
-    (symbol "Diode:1N5819" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+    (symbol "Device:D" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "D" (at 0 2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "1N5819" (at 0 -2.54 0)
+      (property "Value" "D" (at 0 -2.54 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" (at 0 -4.445 0)
+      (property "Footprint" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 0 0 0)
+      (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "diode Schottky" (at 0 0 0)
+      (property "Sim.Device" "D" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "40V 1A Schottky Barrier Rectifier Diode, DO-41" (at 0 0 0)
+      (property "Sim.Pins" "1=K 2=A" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "D*DO?41*" (at 0 0 0)
+      (property "ki_keywords" "diode" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "1N5819_0_1"
+      (property "ki_description" "Diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "D_0_1"
+        (polyline
+          (pts
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
         (polyline
           (pts
             (xy 1.27 0)
@@ -270,20 +284,8 @@
           (stroke (width 0.254) (type default))
           (fill (type none))
         )
-        (polyline
-          (pts
-            (xy -1.905 0.635)
-            (xy -1.905 1.27)
-            (xy -1.27 1.27)
-            (xy -1.27 -1.27)
-            (xy -0.635 -1.27)
-            (xy -0.635 -0.635)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
       )
-      (symbol "1N5819_1_1"
+      (symbol "D_1_1"
         (pin passive line (at -3.81 0 0) (length 2.54)
           (name "K" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
@@ -696,6 +698,10 @@
     (stroke (width 0) (type default))
     (uuid 555cc23d-6a49-430c-8824-0e7453851c5b)
   )
+  (wire (pts (xy 68.58 181.61) (xy 71.12 181.61))
+    (stroke (width 0) (type default))
+    (uuid 5ada0696-1a86-40f0-b895-41b7a2796788)
+  )
   (wire (pts (xy 111.76 76.2) (xy 109.22 76.2))
     (stroke (width 0) (type default))
     (uuid 663cfe0c-e9fc-46a4-86e4-d51775dffd6e)
@@ -725,7 +731,7 @@
     (stroke (width 0) (type default))
     (uuid 798124f2-eb80-4294-93b7-0f75105865ea)
   )
-  (wire (pts (xy 68.58 181.61) (xy 71.12 181.61))
+  (wire (pts (xy 68.58 184.15) (xy 71.12 184.15))
     (stroke (width 0) (type default))
     (uuid 7a2e81ef-515f-4d25-bcb3-8af039e2bc3c)
   )
@@ -777,10 +783,6 @@
   (wire (pts (xy 143.51 68.58) (xy 146.05 68.58))
     (stroke (width 0) (type default))
     (uuid a3503dbb-ade3-4921-8d61-381f34cccb6f)
-  )
-  (wire (pts (xy 68.58 184.15) (xy 71.12 184.15))
-    (stroke (width 0) (type default))
-    (uuid ac96eaff-2a04-4de9-9a08-e41564089ab3)
   )
   (wire (pts (xy 43.18 177.8) (xy 43.18 180.34))
     (stroke (width 0) (type default))
@@ -914,7 +916,7 @@
     )
     (pin "1" (uuid 7e17aa4c-b2c0-48e3-a861-2cca467d7923))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR01") (unit 1)
         )
@@ -939,7 +941,7 @@
     )
     (pin "1" (uuid f5933726-3c6e-4a53-ad7c-11f267c5b351))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR02") (unit 1)
         )
@@ -964,7 +966,7 @@
     )
     (pin "1" (uuid c1f26515-b291-4106-b39a-03c18837fbd8))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR03") (unit 1)
         )
@@ -989,7 +991,7 @@
     )
     (pin "1" (uuid b0236166-8535-4b21-bb05-a7a45f067c84))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR04") (unit 1)
         )
@@ -997,110 +999,10 @@
     )
   )
 
-  (symbol (lib_id "power:+12V") (at 68.58 181.61 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-0000618d9b21)
-    (property "Reference" "#PWR05" (at 72.39 181.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+12V" (at 65.3288 181.229 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 68.58 181.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 68.58 181.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8ca1cd92-6591-47b1-879a-4ee57782748c))
-    (instances
-      (project "P-01L_power_adapter"
-        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 68.58 184.15 270) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-0000618d9b27)
-    (property "Reference" "#PWR06" (at 62.23 184.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 65.3288 184.023 90)
-      (effects (font (size 1.27 1.27)) (justify right))
-    )
-    (property "Footprint" "" (at 68.58 184.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 68.58 184.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4df7cfff-f05b-4079-bc03-d6aef198f1e0))
-    (instances
-      (project "P-01L_power_adapter"
-        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
-          (reference "#PWR06") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:-12V") (at 68.58 186.69 90) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-0000618da79d)
-    (property "Reference" "#PWR07" (at 66.04 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "-12V" (at 65.3288 187.071 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 68.58 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 68.58 186.69 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 12305521-649b-47c4-9cc2-d615bce4b5bd))
-    (instances
-      (project "P-01L_power_adapter"
-        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
-          (reference "#PWR07") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:PWR_FLAG") (at 71.12 181.61 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-0000618dba84)
-    (property "Reference" "#FLG01" (at 73.025 181.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "PWR_FLAG" (at 74.3712 181.61 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 71.12 181.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (at 71.12 181.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 37cb9c58-cbca-4e90-aeff-c7df414638be))
-    (instances
-      (project "P-01L_power_adapter"
-        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
-          (reference "#FLG01") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:PWR_FLAG") (at 71.12 184.15 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 00000000-0000-0000-0000-0000618dc2f3)
-    (property "Reference" "#FLG02" (at 73.025 184.15 0)
+    (uuid 00000000-0000-0000-0000-0000618dba84)
+    (property "Reference" "#FLG01" (at 73.025 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 74.3712 184.15 90)
@@ -1112,11 +1014,11 @@
     (property "Datasheet" "~" (at 71.12 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 78202d75-5402-4927-b45e-1b9f820f9caa))
+    (pin "1" (uuid 37cb9c58-cbca-4e90-aeff-c7df414638be))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
-          (reference "#FLG02") (unit 1)
+          (reference "#FLG01") (unit 1)
         )
       )
     )
@@ -1139,7 +1041,7 @@
     )
     (pin "1" (uuid 77e3f288-ffbe-470d-87f2-bead89c65536))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#FLG03") (unit 1)
         )
@@ -1164,7 +1066,7 @@
     )
     (pin "1" (uuid 7b8d4e21-e312-479b-a44d-77e197a7447c))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR017") (unit 1)
         )
@@ -1189,7 +1091,7 @@
     )
     (pin "1" (uuid 4e4ff151-0d5e-4006-9132-e969da188dff))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR024") (unit 1)
         )
@@ -1214,7 +1116,7 @@
     )
     (pin "1" (uuid cf5144c9-931f-4fa6-9025-9e7d7712ffbf))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR025") (unit 1)
         )
@@ -1239,7 +1141,7 @@
     )
     (pin "1" (uuid 3b7002c3-884e-4601-979f-0091c8d24586))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR023") (unit 1)
         )
@@ -1247,25 +1149,31 @@
     )
   )
 
-  (symbol (lib_id "Diode:1N5819") (at 149.86 41.91 180) (unit 1)
+  (symbol (lib_id "Device:D") (at 149.86 41.91 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00006191c2a0)
     (property "Reference" "D1" (at 149.86 35.56 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1N5819" (at 149.86 38.1 0)
+    (property "Value" "1N5819HW" (at 149.86 38.1 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 149.86 37.465 0)
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 149.86 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 149.86 41.91 0)
+    (property "Datasheet" "~" (at 149.86 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Device" "D" (at 149.86 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Pins" "1=K 2=A" (at 149.86 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 422f834c-dfa8-49d9-ad9a-5665c346c56f))
     (pin "2" (uuid 513515e7-8a6a-448f-96c0-914d7cb5fd26))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "D1") (unit 1)
         )
@@ -1291,7 +1199,7 @@
     (pin "1" (uuid df7231d7-e739-466c-a29e-e861a2e8df7d))
     (pin "2" (uuid 22a9c28e-eaf6-4cf7-b789-159a9eef2c56))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "C1") (unit 1)
         )
@@ -1316,7 +1224,7 @@
     )
     (pin "1" (uuid 3c17d804-1f30-4443-95fc-4a43e596e79a))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR019") (unit 1)
         )
@@ -1324,25 +1232,31 @@
     )
   )
 
-  (symbol (lib_id "Diode:1N5819") (at 149.86 68.58 180) (unit 1)
+  (symbol (lib_id "Device:D") (at 149.86 68.58 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-00006192e692)
     (property "Reference" "D2" (at 149.86 62.23 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1N5819" (at 149.86 64.77 0)
+    (property "Value" "1N5819HW" (at 149.86 64.77 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 149.86 64.135 0)
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 149.86 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 149.86 68.58 0)
+    (property "Datasheet" "~" (at 149.86 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Device" "D" (at 149.86 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Pins" "1=K 2=A" (at 149.86 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bd11eb09-8942-49c7-bf91-ce734c810ba8))
     (pin "2" (uuid 718537ee-6bff-420f-8a6d-8b68f810bf95))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "D2") (unit 1)
         )
@@ -1368,7 +1282,7 @@
     (pin "1" (uuid d349cf76-a41c-443c-832d-3c0c4e20b699))
     (pin "2" (uuid 08ec5fe8-c041-437d-9efc-da359b585513))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "C2") (unit 1)
         )
@@ -1393,7 +1307,7 @@
     )
     (pin "1" (uuid 6edf7e93-9d29-4ce3-bf5e-6833fca660d0))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR020") (unit 1)
         )
@@ -1401,25 +1315,31 @@
     )
   )
 
-  (symbol (lib_id "Diode:1N5819") (at 149.86 95.25 0) (mirror x) (unit 1)
+  (symbol (lib_id "Device:D") (at 149.86 95.25 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 00000000-0000-0000-0000-000061931162)
     (property "Reference" "D3" (at 149.86 88.9 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "1N5819" (at 149.86 91.44 0)
+    (property "Value" "1N5819HW" (at 149.86 91.44 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Diode_SMD:D_SOD-123" (at 149.86 90.805 0)
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 149.86 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://www.vishay.com/docs/88525/1n5817.pdf" (at 149.86 95.25 0)
+    (property "Datasheet" "~" (at 149.86 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Device" "D" (at 149.86 95.25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Pins" "1=K 2=A" (at 149.86 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4ea4e3d4-d42c-45f2-814f-259479576cf0))
     (pin "2" (uuid 06d1f6e2-3b7f-499e-aad1-e523a16ced30))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "D3") (unit 1)
         )
@@ -1445,7 +1365,7 @@
     (pin "1" (uuid 2c853eaa-f256-4b8f-8406-b8839f8ee21a))
     (pin "2" (uuid 344c0af6-a187-4112-b563-946ca0f0e826))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "C3") (unit 1)
         )
@@ -1470,7 +1390,7 @@
     )
     (pin "1" (uuid bfc76f61-5bc2-4bba-84ab-a1ea5a98ab31))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR021") (unit 1)
         )
@@ -1498,7 +1418,7 @@
     (pin "3" (uuid 2669bccf-5863-4f8f-aeb0-49444ce8cda2))
     (pin "4" (uuid f40baab1-5c00-4b81-8daf-602c994afa74))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "J4") (unit 1)
         )
@@ -1523,7 +1443,7 @@
     )
     (pin "1" (uuid 9d297a9a-9152-47dd-a25f-9c1ddc0f0bd9))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR016") (unit 1)
         )
@@ -1551,7 +1471,7 @@
     (pin "3" (uuid 8c1575de-da8f-4994-b7a8-3f92eb5578b2))
     (pin "4" (uuid 3b8ad5d5-cc6c-4ce7-afb6-f2eee928dd63))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "J6") (unit 1)
         )
@@ -1579,7 +1499,7 @@
     (pin "3" (uuid 7f0316d0-80f0-472b-8809-5ab41be80074))
     (pin "4" (uuid faa01d2d-5b24-4c65-998f-11e43744e5a4))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "J3") (unit 1)
         )
@@ -1604,7 +1524,7 @@
     )
     (pin "1" (uuid 259b3a6a-2718-4997-a758-df416c3a43d7))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR014") (unit 1)
         )
@@ -1629,7 +1549,7 @@
     )
     (pin "1" (uuid 04433bee-b1b3-40ae-a007-9fe9bb532721))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR012") (unit 1)
         )
@@ -1654,7 +1574,7 @@
     )
     (pin "1" (uuid d7437f2e-5b1a-467a-bf69-cee0a6b52efc))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR08") (unit 1)
         )
@@ -1679,7 +1599,7 @@
     )
     (pin "1" (uuid 06563944-72c6-4d5d-af7c-d7da3b8b1633))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR010") (unit 1)
         )
@@ -1704,7 +1624,7 @@
     )
     (pin "1" (uuid b2748ed2-092d-4f76-89d6-4b0358acdcb5))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR015") (unit 1)
         )
@@ -1729,7 +1649,7 @@
     )
     (pin "1" (uuid 91a79ced-055b-4dbe-bc52-6dd379e29e8a))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR013") (unit 1)
         )
@@ -1754,7 +1674,7 @@
     )
     (pin "1" (uuid f3e8d49b-f70c-4f17-a445-9bc2c5a8cbfc))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR09") (unit 1)
         )
@@ -1779,7 +1699,7 @@
     )
     (pin "1" (uuid ad303490-7029-4f38-89ca-3ca01a943697))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR011") (unit 1)
         )
@@ -1809,7 +1729,7 @@
     (pin "5" (uuid aaad4c2a-be88-4986-b8cc-99b0fcfb326e))
     (pin "6" (uuid bef7fe38-22ef-48e0-aa55-0e8ca4d16a86))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "J1") (unit 1)
         )
@@ -1839,7 +1759,7 @@
     (pin "5" (uuid 22746b37-2f79-409c-82a9-5a5566e5a655))
     (pin "6" (uuid 1775ac4a-d563-42bd-95c9-7bffb7eda651))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "J2") (unit 1)
         )
@@ -1864,7 +1784,7 @@
     )
     (pin "1" (uuid d1d545e6-86e0-4a9d-a832-fdd500c98a7f))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "TP1") (unit 1)
         )
@@ -1889,9 +1809,84 @@
     )
     (pin "1" (uuid b1a5927a-ab34-434e-83ee-ec019a9739ca))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "TP2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+5V") (at 68.58 181.61 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 6f33b490-6d7d-45bd-807f-4a4750f62ecb)
+    (property "Reference" "#PWR026" (at 72.39 181.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V" (at 64.77 181.61 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 68.58 181.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 68.58 181.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 40294905-b89f-4228-a7da-64d6ce16d373))
+    (instances
+      (project "P-01-L_power_adapter"
+        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
+          (reference "#PWR026") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:PWR_FLAG") (at 71.12 181.61 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid bf3a3f68-3230-4284-97f2-fc9961cf4661)
+    (property "Reference" "#FLG04" (at 73.025 181.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "PWR_FLAG" (at 74.3712 181.61 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 71.12 181.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 71.12 181.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 9ba0be7b-7977-446f-ad9d-89758635515c))
+    (instances
+      (project "P-01-L_power_adapter"
+        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
+          (reference "#FLG04") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+12V") (at 68.58 184.15 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid da41a9da-5109-413e-8332-1e1b5c2393a2)
+    (property "Reference" "#PWR07" (at 72.39 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+12V" (at 64.77 184.15 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 68.58 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 68.58 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 029594ff-3a9a-4bd7-8e7d-162618f5deee))
+    (instances
+      (project "P-01-L_power_adapter"
+        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
+          (reference "#PWR07") (unit 1)
         )
       )
     )
@@ -1919,7 +1914,7 @@
     (pin "GATE" (uuid ef07d892-f2ef-4102-a459-a93a5c29750f))
     (pin "GND" (uuid b8d254d8-8d9f-4331-8100-996af03197f1))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "J5") (unit 1)
         )
@@ -1944,7 +1939,7 @@
     )
     (pin "1" (uuid f46d1fe0-4d89-4ef4-8466-37be40b93bcf))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR022") (unit 1)
         )
@@ -1969,9 +1964,34 @@
     )
     (pin "1" (uuid ac7862fd-b0c0-4bff-920d-836d0d4a337b))
     (instances
-      (project "P-01L_power_adapter"
+      (project "P-01-L_power_adapter"
         (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
           (reference "#PWR018") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:-12V") (at 68.58 186.69 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ed33a236-218f-4030-956c-161fd65a8501)
+    (property "Reference" "#PWR06" (at 66.04 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "-12V" (at 64.77 186.69 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 68.58 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 68.58 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ac4b381e-e4c1-4003-a530-29188f4196b6))
+    (instances
+      (project "P-01-L_power_adapter"
+        (path "/56d7fd73-1d8e-47dd-b8b8-d45da226735b"
+          (reference "#PWR06") (unit 1)
         )
       )
     )

@@ -402,7 +402,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
-      "simulation_model_issue": "error",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -414,7 +414,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "P-01-L_power_adapter.kicad_pro",
+    "filename": "P-01-R_power_adapter.kicad_pro",
     "version": 1
   },
   "net_settings": {
